@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import Form from "./components/Users/UserForm";
-import Items from "./components/Items/UserItem";
+import UsersList from "./components/Items/UsersList";
 
-const Data = [];
+const Data = [
+  {
+    key: 0,
+    username: "norozuy",
+    age: 23,
+  },
+];
 
 function App() {
   const [Users, setUsers] = useState(Data);
@@ -15,7 +21,7 @@ function App() {
   return (
     <div>
       <Form onAddUser={addUserHandler} />
-      <Items items={Users} />
+      <UsersList dataList={Users} />
     </div>
   );
 }

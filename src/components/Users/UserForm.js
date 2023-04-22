@@ -20,7 +20,7 @@ const Form = (probs) => {
     probs.onAddUser(User);
   };
   return (
-    <form onSubmit={submitHandler} class="form">
+    <form onSubmit={submitHandler} className="form">
       <label htmlFor="username">Username</label>
       <input type="text" id="username" onChange={usernameChangeHandler}></input>
       <label htmlFor="age">Age (year)</label>

@@ -15,8 +15,20 @@ const Form = (probs) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    if (enteredAge.trim().length === 0 && enteredUsername.trim().length === 0) {
+      probs.onAlertHandler("Please entere your age & username");
+      return;
+    }
     if (enteredAge.trim().length === 0) {
-      probs.onAlertHandler("empty age");
+      probs.onAlertHandler("Please entere your age");
+      return;
+    }
+    if (enteredUsername.trim().length === 0) {
+      probs.onAlertHandler("Please entere your username");
+      return;
+    }
+    if (enteredAge < 0 || enteredAge > 200) {
+      probs.onAlertHandler("Please entere logic age");
       return;
     }
     const User = {

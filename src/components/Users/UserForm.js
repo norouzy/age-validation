@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Alert from "../Alert/Alert";
+
 import "./UserForm.css";
 
 const Form = (probs) => {
@@ -13,6 +15,10 @@ const Form = (probs) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    if (enteredAge.trim().length === 0) {
+      probs.onAlertHandler("empty age");
+      return;
+    }
     const User = {
       username: enteredUsername,
       age: enteredAge,

@@ -1,3 +1,9 @@
 .list {
-  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 600px;
+  padding-left: 0;
+  margin: auto;
+  gap: 0.5rem;
 }

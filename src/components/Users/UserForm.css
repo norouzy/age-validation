@@ -1,0 +1,27 @@
+.form {
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: aliceblue;
+  align-content: start;
+  width: 600px;
+  padding: 1.6rem;
+  gap: 0.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.form input {
+  height: 1.6rem;
+}
+
+.form button {
+  justify-self: start;
+  background-color: purple;
+  color: aliceblue;
+  border: none;
+  padding: 0.5rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 500;
+}

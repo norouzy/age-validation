@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./UserForm.css";
 
 const Form = (probs) => {
   const [enteredUsername, setEnteredUsername] = useState("");
@@ -19,12 +20,12 @@ const Form = (probs) => {
     probs.onAddUser(User);
   };
   return (
-    <form onSubmit={submitHandler} class="">
+    <form onSubmit={submitHandler} class="form">
       <label htmlFor="username">Username</label>
       <input type="text" id="username" onChange={usernameChangeHandler}></input>
       <label htmlFor="age">Age (year)</label>
       <input type="number" id="age" onChange={ageChangeHandler}></input>
-      <button>Submit</button>
+      <button>Add User</button>
     </form>
   );
 };
